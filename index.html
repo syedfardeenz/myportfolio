@@ -3,135 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Fardeen | Portfolio</title>
+    <title>Syed Fardeen | Senior Operations Executive</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .accent-text { color: #60a5fa; } /* Soft Blue Accent */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --accent: #3b82f6;
+            --text-white: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-main); 
+            color: var(--text-dim); 
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .glass-panel { 
+            background: rgba(30, 41, 59, 0.7); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            backdrop-filter: blur(8px); 
+        }
+
+        .experience-border {
+            border-left: 2px solid #334155;
+            transition: border-color 0.3s ease;
+        }
+
+        .experience-card:hover .experience-border {
+            border-color: var(--accent);
+        }
+
+        .highlight-text { color: var(--text-white); font-weight: 600; }
+        
+        h1, h2, h3, h4 { color: var(--text-white); tracking: -0.02em; }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #2563eb;
+        }
     </style>
 </head>
-<body class="bg-[#0f172a] text-slate-300">
+<body>
 
-    <nav class="fixed w-full z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter text-white">SF<span class="accent-text">.</span></span>
-            <div class="hidden md:flex gap-8 text-sm font-medium">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#experience" class="hover:text-white transition">Experience</a>
-                <a href="#skills" class="hover:text-white transition">Skills</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold text-white uppercase tracking-tighter">SF<span class="text-blue-500">.</span></span>
+            <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-widest">
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#automation" class="hover:text-blue-400 transition">Automation</a>
+                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
             </div>
         </div>
     </nav>
 
     <section id="about" class="min-h-screen flex items-center pt-20 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <p class="accent-text font-mono mb-4 text-lg">Hello, I'm</p>
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Syed Fardeen</h1>
-                <h2 class="text-2xl md:text-3xl font-semibold text-slate-400 mb-6">Operations Specialist | Process Automation</h2>
-                <p class="text-lg leading-relaxed mb-8 max-w-xl text-slate-400">
-                    With over 5 years of experience in Supply Chain and Logistics, I specialize in transforming complex manual processes into high-efficiency automated workflows. Currently leading Last Mile operations at Amazon India, focusing on scalability, data accuracy, and significant cost savings.
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Syed Fardeen S</h1>
+                <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+                    Results-driven supply chain professional with 5+ years of experience, including 4 years in Amazon Last mile & First mile Operations, specializing in Operations Planning.
                 </p>
+                
+                <div class="space-y-3 mb-10 text-sm">
+                    <p><i class="fa-solid fa-location-dot text-blue-500 mr-3"></i> Bellandur, Bengaluru, Karnataka, India - 560103</p>
+                    <p><i class="fa-solid fa-envelope text-blue-500 mr-3"></i> syedfardeen947@gmail.com</p>
+                    <p><i class="fa-solid fa-phone text-blue-500 mr-3"></i> +91 9677731229</p>
+                </div>
+
                 <div class="flex gap-4">
-                    <a href="#experience" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-900/20">View My Work</a>
-                    <div class="flex items-center gap-4 ml-4">
-                        <a href="#" class="text-2xl hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="text-2xl hover:text-white transition"><i class="fa-brands fa-github"></i></a>
-                    </div>
+                    <a href="https://linkedin.com/in/syedfardeen" target="_blank" class="btn-primary px-8 py-3 rounded-lg font-bold">LinkedIn Profile</a>
                 </div>
             </div>
-            <div class="flex justify-center relative">
-                <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-blue-500/30 p-2">
-                    <img src="https://via.placeholder.com/400" alt="Profile" class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition duration-500">
+
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-80 h-[450px] rounded-2xl overflow-hidden border-2 border-slate-700 shadow-2xl">
+                    <img src="profile.jpg" alt="Syed Fardeen" class="w-full h-full object-cover">
                 </div>
-                <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-600/10 blur-3xl rounded-full"></div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 px-6 bg-[#0b1120]">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
-                Experience <span class="ml-4 h-[1px] bg-slate-700 flex-grow"></span>
-            </h2>
+    <section class="py-20 px-6 bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+            <p class="text-slate-400 leading-relaxed italic border-l-4 border-blue-500 pl-6">
+                Proven track record in managing program improvement activities, driving process optimization through task automations and validation models. Highly skilled in stakeholder management, root-cause analysis and creating data-driven reports that enhance accuracy and streamline end-to-end package flow to last mile delivery stations across India.
+            </p>
+        </div>
+    </section>
+
+    <section id="automation" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12">Automation Projects & Program Optimizations</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-panel p-8 rounded-xl">
+                    <h4 class="highlight-text mb-3">Capacity ask & deployment Model</h4>
+                    <p class="text-sm">Automated ~49 hours of manual effort per week (90% reduction), resulting in 0.7 HC savings and eliminating deployment inaccuracies.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-xl">
+                    <h4 class="highlight-text mb-3">Integrated Validation Suites</h4>
+                    <p class="text-sm">Developed three distinct tools: Pre-deployment (audit of LM constrained request vs forecast), Post-deployment (network wide S&OP capacities mismatch detection) and Holiday/Contingency (higher capacity revision for over attainment stations) delivering 0.6 HC savings.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-xl">
+                    <h4 class="highlight-text mb-3">Leadership Dashboards & Analytics</h4>
+                    <p class="text-sm">Developed automated EOD and week-on-week DOD Excel dashboards to synthesize response rate insights for AMZL and external partners, provided leadership with clear visibility into capacity gaps, reducing follow-up time and increasing approval rates from ~40% to ~67%.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-xl">
+                    <h4 class="highlight-text mb-3">Utilization & Synchronizer Tools</h4>
+                    <ul class="text-sm space-y-2">
+                        <li>• <strong>Utilization Balancing:</strong> Created automated model to balance capacities between cycle counts, improving stations utilization by ~34%.</li>
+                        <li>• <strong>Holiday Deployment Synchronizer:</strong> Created a model to reconcile real-time forecasts with Holiday Planning Team configurations, generated final execution outputs for lower capacity nodes, delivering ~0.1 HC savings.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6 bg-slate-900/30">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16">Professional Experience</h2>
             
-            <div class="space-y-12">
-                <div class="relative pl-8 border-l border-slate-700">
-                    <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6.5px] top-2"></div>
-                    <div class="flex justify-between items-start flex-wrap mb-2">
-                        <h3 class="text-xl font-bold text-white">Senior Operations Executive</h3>
-                        <span class="text-sm font-mono text-slate-500">2022 — Present</span>
+            <div class="space-y-16">
+                <div class="experience-card relative pl-8 experience-border">
+                    <div class="flex flex-col md:flex-row justify-between mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold">Senior Operations Executive - Operations planning</h3>
+                            <p class="text-blue-400 font-semibold tracking-wide">Amazon | Bengaluru, IN</p>
+                        </div>
+                        <p class="text-xs font-mono text-slate-500 mt-2">December 2023 - Present</p>
                     </div>
-                    <p class="accent-text font-medium mb-4">Amazon India | Bengaluru</p>
-                    <ul class="space-y-3 text-slate-400">
-                        <li class="flex gap-2"><span>•</span> <span>Automated ~49 hours of manual effort per week (90% reduction) by developing a Capacity Ask & Deployment Model.</span></li>
-                        <li class="flex gap-2"><span>•</span> <span>Maintained 100% accuracy in volumetric capping during critical "Jupiter" peak events (2024-2025).</span></li>
-                        <li class="flex gap-2"><span>•</span> <span>Orchestrated Last Mile network flow, ensuring process stability across high-volume nodes.</span></li>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li>• <span class="highlight-text">Capacity planning & Strategy:</span> Manage end-to-end capacity flow control for Last Mile delivery stations by aligning capacities with on-ground forecasts and dynamic demand planning to optimize station and manpower usage.</li>
+                        <li>• <span class="highlight-text">Stakeholder Management:</span> Partner with Last Mile stakeholders to procure capacity for stations, revising allocations to prevent overloads, underutilization and minimize schedule breaches to ensure customer promises.</li>
+                        <li>• <span class="highlight-text">Predictive Trend analysis:</span> Analyze forward and historical orders across air, rush, same-day, standard ship methods and customer returns to refine the capacity ask mechanism and reduce last-minute escalations.</li>
+                        <li>• <span class="highlight-text">Network stability Management:</span> Maintain station stability during sales peak by collaborating with Holiday Planning and Contingency teams to proactively throttle or redistribute volume across configured nodes.</li>
+                        <li>• <span class="highlight-text">Performance Diagnostics & RCA:</span> Bridging Weekly Business Reviews and deep-dive root cause analyses on demand over-attainment and schedule breaches to implement concrete corrective actions for delivery stations.</li>
+                        <li>• <span class="highlight-text">Team Leadership & Knowledge Management:</span> Facilitate onboarding and training for new hires while managing on-call rosters for the team to ensure seamless execution of critical cross-functional team requirements; authored comprehensive SOP documentation to standardize process knowledge and serve as a technical reference for the team.</li>
                     </ul>
                 </div>
 
-                <div class="relative pl-8 border-l border-slate-700">
-                    <div class="absolute w-3 h-3 bg-slate-700 rounded-full -left-[6.5px] top-2"></div>
-                    <div class="flex justify-between items-start flex-wrap mb-2">
-                        <h3 class="text-xl font-bold text-white">Graduate Engineer Trainee</h3>
-                        <span class="text-sm font-mono text-slate-500">Previous Tenure</span>
+                <div class="experience-card relative pl-8 experience-border">
+                    <div class="flex flex-col md:flex-row justify-between mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold">Data Operations Associate - First Mile Operations</h3>
+                            <p class="text-blue-400 font-semibold tracking-wide">Amazon | Bengaluru, IN</p>
+                        </div>
+                        <p class="text-xs font-mono text-slate-500 mt-2">January 2022 - December 2023</p>
                     </div>
-                    <p class="accent-text font-medium mb-4">Supply Chain Division</p>
-                    <p class="text-slate-400">Pioneered workflow optimizations and assisted in cross-functional team management to streamline warehouse inventory movement.</p>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li>• <span class="highlight-text">Inbound Optimization:</span> Optimized Inbound Operations flow by delivering precise data inputs for critical jobs breaching defined thresholds across fulfillment centers (First Mile) in USA, Japan, and EU.</li>
+                        <li>• <span class="highlight-text">Inventory Quality assurance:</span> Ensured seamless Inventory Control Quality Audit (ICQA) operations through precise decision making on HMI jobs, directly contributing to the overall data quality and audit accuracy.</li>
+                        <li>• <span class="highlight-text">Tool Enhancement:</span> Partnered on high impact pilot programs to enhance HMI tool user experience, resulting in improved processing efficiency and a significant reduction in errors and rework.</li>
+                        <li>• <span class="highlight-text">Systemic Risk Mitigation:</span> Identified and resolved systemic discrepancies by raising disputes on incorrect bin calibrations and virtual pod configuration gaps, provided feedback that improved overall data quality.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card relative pl-8 experience-border">
+                    <div class="flex flex-col md:flex-row justify-between mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold">Graduate Engineer Trainee - Production & Quality Operations</h3>
+                            <p class="text-blue-400 font-semibold tracking-wide">Myunghwa Automotive India | Chennai, IN</p>
+                        </div>
+                        <p class="text-xs font-mono text-slate-500 mt-2">May 2019 - May 2020</p>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li>• <span class="highlight-text">Operational Supervision:</span> Led day-to-day assembly section operations, utilizing Statistical Process Control (SPC) and Blueprint interpretation to ensure all output met standard configurations and production schedules.</li>
+                        <li>• <span class="highlight-text">Quality Control & Metrology:</span> Controlled defects and improved quality by using Metrology tools to analyze tolerance values and documenting detailed inspection reports, recurring faults to implement corrective actions.</li>
+                        <li>• <span class="highlight-text">EHS & Shop-Floor Excellence:</span> Enhanced shop-floor discipline and efficiency by onboarding new hires on industrial safety standards and maintaining strict 5S practices.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-24 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center">Technical Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-card p-8 rounded-2xl">
-                    <h3 class="text-white font-bold mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-bolt accent-text"></i> Automation
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">VBA</span>
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">Power Query</span>
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">Advanced Excel</span>
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">Data Validation</span>
-                    </div>
+    <section id="achievements" class="py-24 px-6 bg-blue-600/10">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12">Achievements</h2>
+            <div class="space-y-6">
+                <div class="glass-panel p-6 rounded-lg border-l-4 border-blue-500">
+                    <h4 class="highlight-text">Supply Chain Outstanding Performer</h4>
+                    <p class="text-sm mt-2">Recognized for delivering exceptional operational results and driving network-wide process improvements.</p>
                 </div>
-                <div class="glass-card p-8 rounded-2xl">
-                    <h3 class="text-white font-bold mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-gears accent-text"></i> Operations
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">S&OP Planning</span>
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">Flow Control</span>
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">Last Mile</span>
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">Capacity Modeling</span>
-                    </div>
+                <div class="glass-panel p-6 rounded-lg border-l-4 border-blue-500">
+                    <h4 class="highlight-text">Fast & Furious Award (Amazon Great Indian Festival)</h4>
+                    <p class="text-sm mt-2">Led team execution under tight deadlines to secure additional approval for 403M shipments and rebalance 38K units. Managed 1,009 Last Mile SIMs and deployed 223 lower-capping SIMs with 0% defects and ensuring network reliability.</p>
                 </div>
-                <div class="glass-card p-8 rounded-2xl">
-                    <h3 class="text-white font-bold mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-database accent-text"></i> ERP & Future
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">SAP MM</span>
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">Master Data (MDM)</span>
-                        <span class="bg-slate-800 px-3 py-1 rounded text-xs">Inventory Mgmt</span>
-                    </div>
+                <div class="glass-panel p-6 rounded-lg border-l-4 border-blue-500">
+                    <h4 class="highlight-text">Individual Rank 1 Contributor</h4>
+                    <p class="text-sm mt-2">Ranked 1 in the South India Cluster (AVOC) for achieving the highest Accuracy and Takt. Also recognized as an "Everyday Star" and maintained a Top 10 ranking across the cluster.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-20 border-t border-slate-800 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Let's Connect</h2>
-        <p class="text-slate-400 mb-8 max-w-md mx-auto">Currently pursuing transitions into Program Management and SAP MM. Based in Bengaluru, open to global opportunities.</p>
-        <a href="mailto:your-email@example.com" class="accent-text text-lg hover:underline underline-offset-8 transition font-mono">syedfardeen@email.com</a>
-        <p class="mt-16 text-xs tracking-widest text-slate-600 uppercase">&copy; 2026 Syed Fardeen. All rights reserved.</p>
+    <section id="skills" class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h3 class="text-xl font-bold mb-8 uppercase tracking-widest text-blue-500 text-xs">Technical Skills</h3>
+                <div class="space-y-4 text-sm">
+                    <p><span class="highlight-text">Advanced Excel:</span> VLOOKUP/XLOOKUP, Data Validation, Logical/Mathematical Functions, Conditional Formatting, Dynamic Dashboarding, Macros and Pivot Tables.</p>
+                    <p><span class="highlight-text">Data Analysis:</span> Deep-dive Root Cause Analysis (RCA) and Automated Validation Modeling.</p>
+                    <p><span class="highlight-text">Professional Tools:</span> MS Office Suite (Word, PowerPoint, Outlook).</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-8 uppercase tracking-widest text-blue-500 text-xs">Education</h3>
+                <div class="glass-panel p-6 rounded-xl">
+                    <h4 class="text-lg font-bold">Bachelor of Mechanical Engineering</h4>
+                    <p class="text-blue-400">Anna University</p>
+                    <p class="text-xs text-slate-500 font-mono">Class of 2019 | CGPA: 7.0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[10px] font-mono tracking-[0.4em] uppercase text-slate-600">
+        &copy; 2026 Syed Fardeen S | Operations Portfolio
     </footer>
 
 </body>
