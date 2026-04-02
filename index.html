@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>Syed Fardeen S | Senior Operations Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -53,8 +54,10 @@
         #theme-toggle { cursor: pointer; width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: var(--glass); border: 1px solid var(--border); color: var(--text); font-size: 1.2rem; transition: 0.3s; }
         #theme-toggle:hover { transform: scale(1.1); background: var(--accent); color: white; }
 
-        .social-circle { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #0a66c2; color: white; transition: 0.4s; }
-        .social-square { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: #ea4335; color: white; transition: 0.4s; }
+        /* Restored Social Glow Effects */
+        .social-circle { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #0a66c2; color: white; transition: 0.4s; box-shadow: 0 4px 15px rgba(10, 102, 194, 0.3); }
+        .social-square { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: #ea4335; color: white; transition: 0.4s; box-shadow: 0 4px 15px rgba(234, 67, 53, 0.3); }
+        .social-circle:hover, .social-square:hover { transform: scale(1.1) rotate(5deg); filter: brightness(1.2); }
         
         nav { background: var(--nav-bg); }
         h1, h2, h3, h4 { color: var(--text); }
@@ -88,19 +91,11 @@
                     Senior Operations Executive @ Amazon | Supply Chain Management | <br>
                     Operations and Capacity Flow Control Management - Last Mile Network
                 </p>
-                
                 <div class="flex flex-wrap gap-4 text-xs font-bold mb-10">
-                    <a href="mailto:syedfardeen947@gmail.com" class="contact-btn">
-                        <i class="fa-solid fa-envelope text-blue-500"></i> syedfardeen947@gmail.com
-                    </a>
-                    <a href="https://www.linkedin.com/in/syedfardeen" target="_blank" class="contact-btn">
-                        <i class="fa-brands fa-linkedin text-blue-500"></i> LinkedIn: Syed Fardeen
-                    </a>
-                    <a href="http://googleusercontent.com/maps.google.com/4" target="_blank" class="contact-btn">
-                        <i class="fa-solid fa-location-dot text-blue-500"></i> Bengaluru, India
-                    </a>
+                    <a href="mailto:syedfardeen947@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope text-blue-500"></i> syedfardeen947@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/syedfardeen" target="_blank" class="contact-btn"><i class="fa-brands fa-linkedin text-blue-500"></i> LinkedIn: Syed Fardeen</a>
+                    <a href="http://googleusercontent.com/maps.google.com/4" target="_blank" class="contact-btn"><i class="fa-solid fa-location-dot text-blue-500"></i> Bengaluru, India</a>
                 </div>
-
                 <div class="glass-card p-8 rounded-2xl">
                     <h2 class="font-black uppercase text-xs tracking-widest mb-4">Career Summary</h2>
                     <p class="leading-relaxed">Supply chain professional with 5+ years of experience, including 4+ years in Amazon Last mile & First mile Operations, specializing in Capacity Planning for Last Mile Delivery Network. Proven track record in managing Program Improvement activities, driving process optimization through task automations and validation models. Highly skilled in stakeholder management, root-cause analysis and creating data-driven reports that enhance accuracy and streamline end-to-end package flow.</p>
@@ -117,7 +112,6 @@
     <section id="experience" class="py-24 px-6">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl section-header mb-16">Professional Experience</h2>
-            
             <div class="space-y-20">
                 <div class="relative pl-8 border-l-2 border-blue-600">
                     <div class="mb-6">
@@ -245,7 +239,6 @@
                     <div class="skill-tag"><i class="fa-solid fa-file-powerpoint mr-2"></i>MS Office Suite</div>
                 </div>
             </div>
-
             <div class="edu-card p-12 rounded-[2.5rem]">
                 <h3 class="font-black uppercase tracking-widest text-lg mb-8">Academic Foundation</h3>
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -259,12 +252,11 @@
                 </div>
             </div>
         </div>
-
         <div class="max-w-6xl mx-auto mt-32 text-center">
             <h2 class="text-2xl font-bold mb-4">Let's Connect</h2>
             <div class="flex justify-center gap-8 mb-12">
-                <a href="https://www.linkedin.com/in/syedfardeen" target="_blank" class="social-circle"><i class="fa-brands fa-linkedin-in text-2xl"></i></a>
-                <a href="mailto:syedfardeen947@gmail.com" class="social-square"><i class="fa-solid fa-envelope text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/syedfardeen" target="_blank" class="social-circle" title="LinkedIn"><i class="fa-brands fa-linkedin-in text-2xl"></i></a>
+                <a href="mailto:syedfardeen947@gmail.com" class="social-square" title="Gmail"><i class="fa-solid fa-envelope text-2xl"></i></a>
             </div>
             <p class="text-[11px] font-medium tracking-widest opacity-50 uppercase">© 2026 Syed Fardeen. All rights reserved.</p>
         </div>
